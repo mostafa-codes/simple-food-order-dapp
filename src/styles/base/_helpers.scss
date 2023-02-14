@@ -1,0 +1,68 @@
+@use 'vars' as vars;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) {
+    $value: 0;
+  } // Turn 0rem into 0
+  @return $value;
+}
+
+@function toRem($values, $base-value: vars.$remBase) {
+  $max: length($values);
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append(
+      $remValues,
+      convert-to-rem(nth($values, $i), $base-value)
+    );
+  }
+  @return $remValues;
+}
+
+// ====== mixins
+
+@mixin media-xs {
+  @media (min-width: toRem(vars.$breakpointXs)) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @media (min-width: toRem(vars.$breakpointSm)) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media (min-width: toRem(vars.$breakpointMd)) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media (min-width: toRem(vars.$breakpointLg)) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media (min-width: toRem(vars.$breakpointXl)) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: toRem(vars.$breakpointDesktop)) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media (min-width: toRem(vars.$breakpointXxl)) {
+    @content;
+  }
+}

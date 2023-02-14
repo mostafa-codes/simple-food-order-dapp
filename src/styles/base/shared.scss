@@ -1,0 +1,15 @@
+@import 'vars';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.primary-button {
+  background: $secondaryColor;
+  font-weight: bold;
+  height: 48px;
+  &:hover {
+    background: $secondaryColor;
+    color: #000;
+  }
+}

@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'helpers';
+@import 'fonts';
+
+html,
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $baseBackgroundColor;
+  font-family: Heebo;
+}

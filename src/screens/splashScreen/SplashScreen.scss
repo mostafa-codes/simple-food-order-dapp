@@ -1,0 +1,59 @@
+@import '../../styles/base/vars';
+
+.splash-screen {
+  height: 100vh;
+  display: flex;
+}
+
+.inner-wrapper {
+  margin-top: auto;
+  background-color: $primaryColorLight;
+  height: 80vh;
+  width: 100vw;
+  border-top-left-radius: 4vh;
+  border-top-right-radius: 4vh;
+  position: relative;
+}
+.img-wrapper {
+  z-index: 10;
+  left: 0;
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+img {
+  width: 100vw;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  // background: ;;
+}
+
+.splash-content {
+  text-align: center;
+  max-width: $breakpointMd;
+  color: white;
+  margin-top: 230px;
+  h2 {
+    font-size: 30px;
+  }
+  .splash-line {
+    width: 4px;
+    height: 50px;
+    background: white;
+    margin: auto;
+  }
+}
+
+.wallets {
+  margin-top: 50px;
+  img {
+    margin: 15px;
+    border-radius: 50px;
+    width: 50px;
+  }
+}
+.primary-button {
+  max-width: $breakpointSm;
+  margin: auto;
+  margin-bottom: 23px;
+}
