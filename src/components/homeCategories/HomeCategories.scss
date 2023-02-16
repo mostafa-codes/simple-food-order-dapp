@@ -1,0 +1,19 @@
+.categories {
+  overflow-x: scroll;
+  .category-item {
+    margin-left: 20px;
+    .category-title {
+      color: white;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    img {
+      width: 70px;
+      height: 70px;
+      aspect-ratio: 1;
+      border-radius: 70px;
+    }
+  }
+}

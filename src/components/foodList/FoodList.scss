@@ -1,0 +1,12 @@
+.food-item {
+  color: white;
+  cursor: pointer;
+  .food-name {
+    font-size: 18px;
+  }
+  img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}

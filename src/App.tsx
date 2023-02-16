@@ -1,11 +1,22 @@
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainLayout from './layout/MainLayout';
+import HomeScreen from './screens/homeScreen/HomeScreen';
 import SplashScreen from './screens/splashScreen/SplashScreen';
+import TransactionsScreen from './screens/transactionsScreen/TransactionsScreen';
 
 function App() {
   return (
-    <div className="App">
-      <SplashScreen />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/splash" element={<SplashScreen />} />
+
+        {/* Routes with layout*/}
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/transactions" element={<TransactionsScreen />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

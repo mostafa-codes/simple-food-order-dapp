@@ -1,0 +1,37 @@
+@import '../../styles/base/vars';
+@import '../../styles/base/helpers';
+.bottom-bar {
+  position: fixed;
+  color: white;
+  bottom: 23px;
+
+  left: 0;
+  right: 0;
+  .bottom-bar__inner {
+    background: #001d3d;
+    height: 64px;
+    display: flex;
+    padding: 0 9px;
+    margin: auto;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 50px;
+  }
+  .bottom-bar__item {
+    margin: auto 0;
+    color: white;
+    display: block;
+    padding: 9px;
+    line-height: 0;
+    font-size: 30px;
+    svg {
+      vertical-align: middle;
+      line-height: 30px;
+    }
+  }
+  .active {
+    background: $secondaryColor;
+    color: $primaryColorLight;
+    border-radius: 30px;
+  }
+}

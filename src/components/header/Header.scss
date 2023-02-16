@@ -1,0 +1,124 @@
+@import '../../styles/base/vars';
+
+.layout-header {
+  position: sticky;
+  background: $primaryColor;
+  top: -1px;
+  color: white;
+  z-index: 11;
+  padding: 10px 0;
+  .header-nav {
+    font-size: 33px;
+  }
+  .icons {
+    font-size: 20px;
+  }
+  .wallet-account {
+    box-shadow: 0 3px 30px rgba(#000, 0.1);
+    padding-right: 10px;
+    border-radius: 50px;
+    font-weight: 500;
+    img {
+      border-radius: 40px;
+    }
+  }
+
+  .mobile-nav {
+    background: $primaryColor;
+    transform: translateX(-100%);
+    animation-name: slideOut;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-duration: 400ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all ease 300ms;
+    .mobile-nav-inner {
+      transition: all ease 300ms;
+      transform: translateX(-100%);
+      width: 280px;
+      height: 100vh;
+      .top-close {
+        font-weight: bold;
+        font-size: 33px;
+      }
+      .nav-profile {
+        .profile {
+          img {
+            height: 44px;
+            width: 44px;
+            object-fit: cover;
+            border-radius: 50px;
+          }
+        }
+        .profile-name {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .wallet-address {
+          font-size: 13px;
+          color: $grayscale200;
+        }
+      }
+
+      .navitem {
+        .icon-wrapper {
+          border: 1px solid $grayscale100;
+          width: 30px;
+          height: 30px;
+          border-radius: 50px;
+          line-height: 15px;
+        }
+        .navitem-name {
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+      .divider {
+        color: $grayscale300;
+        font-size: 13px;
+      }
+    } // .mobile-nav-inner
+  }
+  .mobile-nav-open {
+    opacity: 1;
+    animation-name: slideIn;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-duration: 400ms;
+    .mobile-nav-inner {
+      transform: translateX(0%);
+    }
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  1% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
