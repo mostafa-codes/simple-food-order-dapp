@@ -1,4 +1,5 @@
 import { SiEthereum } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 import './FoodList.scss';
 
 const foodItems = [
@@ -45,14 +46,18 @@ function FoodList() {
       <p className="text-left text-white section-title">Popular This week</p>
       <div className="row">
         {foodItems.map((item, index) => (
-          <div className="col-6 col-lg-3 mb-3 food-item" key={index}>
+          <Link
+            to="/details/1"
+            className="col-6 col-lg-3 mb-3 food-item"
+            key={index}
+          >
             <img src={item.image} alt={item.name} />
             <div className="food-name mt-2">{item.name}</div>
             <div className="mt-1  food-price">
               <SiEthereum />
               <span className="ms-2">{item.price}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

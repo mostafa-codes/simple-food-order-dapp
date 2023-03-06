@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import dish from '../../assets/dish.png';
 import metamask from '../../assets/metamask.png';
 import wallet2 from '../../assets/wallet2.png';
@@ -6,6 +7,7 @@ import wallet4 from '../../assets/wallet4.png';
 import './SplashScreen.scss';
 
 function SplashScreen() {
+  const navigate = useNavigate();
   return (
     <div className="splash-screen">
       <div
@@ -31,6 +33,9 @@ function SplashScreen() {
           <button
             className="w-100 btn 
             primary-button mt-auto"
+            onClick={() => {
+              navigate('/');
+            }}
           >
             Order Now
           </button>

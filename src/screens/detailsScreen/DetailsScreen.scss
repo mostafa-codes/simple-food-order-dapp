@@ -1,0 +1,69 @@
+@import '../../styles/base/vars';
+
+.details {
+  color: white;
+  position: relative;
+  height: 100vh;
+}
+.details-image {
+  aspect-ratio: 1;
+  height: 50vh;
+  width: 100vw;
+}
+.details-header {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 0;
+  .header-action {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    background: rgba(#828282, 0.4);
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    svg {
+      margin: auto;
+      display: inline-block;
+    }
+  }
+}
+.details-content {
+  height: 50vh;
+  .details-name {
+    margin-top: 20px;
+    font-size: 33px;
+  }
+  .details-actions {
+    font-size: 18px;
+    margin-top: 10px;
+    .reviews {
+      color: $secondaryColor;
+      span {
+        color: white;
+      }
+    }
+    .count-actions {
+    }
+  }
+  .details-desc {
+    margin-top: 20px;
+    text-align: justify;
+    word-spacing: -2px;
+    font-size: 18px;
+  }
+  .details-price {
+    font-size: 18px;
+    text-align: left;
+    .details-badge {
+      color: $secondaryColor;
+      font-size: 14px;
+    }
+  }
+  .add-to-cart button {
+    width: 200px;
+  }
+}

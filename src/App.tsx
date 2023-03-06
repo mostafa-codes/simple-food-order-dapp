@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
+import DetailsScreen from './screens/detailsScreen/DetailsScreen';
 import HomeScreen from './screens/homeScreen/HomeScreen';
 import SplashScreen from './screens/splashScreen/SplashScreen';
 import TransactionsScreen from './screens/transactionsScreen/TransactionsScreen';
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/transactions" element={<TransactionsScreen />} />
         </Route>
+        <Route path="/details/:id" element={<DetailsScreen />} />
       </Routes>
     </BrowserRouter>
   );

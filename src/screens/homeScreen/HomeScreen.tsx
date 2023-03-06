@@ -7,10 +7,8 @@ function HomeScreen() {
   return (
     <div>
       <Header />
-      <div className="container">
-        <HomeCategories />
-        <FoodList />
-      </div>
+      <HomeCategories />
+      <FoodList />
     </div>
   );
 }

@@ -1,5 +1,10 @@
 .food-item {
   color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
   cursor: pointer;
   .food-name {
     font-size: 18px;

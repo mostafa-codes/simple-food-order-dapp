@@ -4,6 +4,12 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+div {
+  margin: 0;
+  padding: 0;
+}
+
 .primary-button {
   background: $secondaryColor;
   font-weight: bold;

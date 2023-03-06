@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div className="layout-header  ">
-      <div className="container header-nav d-flex justify-content-between d-lg-none">
+      <div className="  header-nav d-flex justify-content-between d-lg-none">
         <div
           className="wallet-account d-lg-none"
           style={{
@@ -30,7 +30,7 @@ function Header() {
         </div>
 
         <div className="  me-0">
-          <CiSearch className="me-3" />
+          <CiSearch />
         </div>
       </div>
 
